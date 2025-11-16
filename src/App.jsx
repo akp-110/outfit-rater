@@ -14,16 +14,6 @@ export default function App() {
   const [useWeather, setUseWeather] = useState(true);
   const fileInputRef = useRef(null);
 
-  // Diagnostic: check whether Vite injected the OpenWeather key (presence only)
-  useEffect(() => {
-    try {
-      const hasKey = !!import.meta?.env?.VITE_OPENWEATHER_API_KEY;
-      console.log('VITE_OPENWEATHER_API_KEY present:', hasKey);
-    } catch {
-      console.log('Vite env not available in this runtime');
-    }
-  }, []);
-
   const modes = {
     professional: {
       icon: TrendingUp,
