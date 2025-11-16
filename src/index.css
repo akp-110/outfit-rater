@@ -118,7 +118,7 @@
 
 @media screen and (max-height: 450px) {
   .mode-label {
-    font-size: 0.80rem !important;
+    font-size: 0.60rem !important;
   }
 }
 

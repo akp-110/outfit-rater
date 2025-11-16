@@ -21,8 +21,8 @@ export default async function handler(req, res) {
     const { lat, lon, q } = req.query || {};
 
     // Prefer server-only key; fallback to VITE_ prefixed if present
-    const apiKey = process.env.OPENWEATHER_API_KEY || process.env.VITE_OPENWEATHER_API_KEY;
-    console.log('Weather proxy - OPENWEATHER_API_KEY present:', !!process.env.OPENWEATHER_API_KEY, ' VITE_OPENWEATHER_API_KEY present:', !!process.env.VITE_OPENWEATHER_API_KEY);
+    const apiKey = process.env.OPENWEATHER_API_KEY;
+    console.log('Weather proxy - OPENWEATHER_API_KEY present:', !!process.env.OPENWEATHER_API_KEY);
 
     if (!apiKey) {
       return res.status(400).json({ error: 'OpenWeather API key not configured on server' });
